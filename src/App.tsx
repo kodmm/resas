@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Config } from './config';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  useEffect(() => {
+    console.log(Config.endpoint + Config.prefectures)
+    const results: any = fetch(Config.endpoint + Config.prefectures, {
+      headers: {
+        "X-API-KEY": Config.key,
+      }
+    }).then(response => response.json())
+    console.log(results)
+  },[])
   return (
     <div className="App">
       <header className="App-header">
