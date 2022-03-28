@@ -1,18 +1,17 @@
 import React, { useEffect } from 'react';
-import { Config } from './config';
+import { getPref, Prefectures } from './api/resas';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
 
+  const fetchPref = async() => {
+    const result: Prefectures[] = await getPref();
+    console.log(result)
+  }
+
   useEffect(() => {
-    console.log(Config.endpoint + Config.prefectures)
-    const results: any = fetch(Config.endpoint + Config.prefectures, {
-      headers: {
-        "X-API-KEY": Config.key,
-      }
-    }).then(response => response.json())
-    console.log(results)
+    fetchPref()
   },[])
   return (
     <div className="App">
