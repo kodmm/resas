@@ -7,7 +7,7 @@ type Prefectures = {
 
 type PrefResponse = {
     message: null,
-    results: Prefectures
+    result: Prefectures[]
 }
 
 const getPref: any = async() => {
