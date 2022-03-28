@@ -10,12 +10,16 @@ type PrefResponse = {
     result: Prefectures[]
 }
 
-const getPref: any = async() => {
-    const results: PrefResponse = await fetch(Config.endpoint, {
+const getPref = async(): Promise<Prefectures[]> => {
+    const { result }: PrefResponse = await fetch(Config.endpoint + Config.prefectures, {
         method: "GET",
         headers: {
           "X-API-KEY": Config.key,
         }
       }).then(response => response.json())
-    return results.results
+      
+    return result
 }
+
+export { getPref }
+export type { Prefectures}
