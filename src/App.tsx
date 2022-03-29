@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { getPref, Prefectures } from './api/resas';
 import logo from './logo.svg';
 import './App.css';
-import { useAppDispatch, useAppSelector } from './hooks';
-import { setPrefectures, selectPrefectures } from './features/prefectures/prefecturesSlice';
+import { useAppDispatch } from './hooks';
+import { setPrefectures } from './features/prefectures/prefecturesSlice';
 
 function App() {
   const dispatch = useAppDispatch()
