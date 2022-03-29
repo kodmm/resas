@@ -2,12 +2,15 @@ import React, { useEffect } from 'react';
 import { getPref, Prefectures } from './api/resas';
 import logo from './logo.svg';
 import './App.css';
+import { useAppDispatch, useAppSelector } from './hooks';
+import { setPrefectures, selectPrefectures } from './features/prefectures/prefecturesSlice';
 
 function App() {
+  const dispatch = useAppDispatch()
 
   const fetchPref = async() => {
     const result: Prefectures[] = await getPref();
-    console.log(result)
+    dispatch(setPrefectures(result))
   }
 
   useEffect(() => {
