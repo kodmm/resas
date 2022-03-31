@@ -1,0 +1,28 @@
+.wrapper {
+    padding: 0 16px;
+}
+.title {
+    margin-top: 0;
+}
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px 8px;
+}
+.box {
+    text-align: center;
+    padding: 4px;
+    margin: 4px;
+   
+}
+.box > * {
+    cursor: pointer;
+}
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+.text {
+    padding-left: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
