@@ -22,4 +22,4 @@ const getPref = async(): Promise<Prefectures[]> => {
 }
 
 export { getPref }
-export type { Prefectures}
+export type { Prefectures }
