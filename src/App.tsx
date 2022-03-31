@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useAppDispatch } from './hooks';
 import { setPrefectures } from './features/prefectures/prefecturesSlice';
+import { Main } from './components/main';
 
 function App() {
   const dispatch = useAppDispatch()
