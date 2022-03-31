@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { getPref, Prefectures } from './api/resas';
-import logo from './logo.svg';
+import { getPref  } from './api/resas';
+import type { Prefectures } from './api/resas';
 import './App.css';
 import { useAppDispatch } from './hooks';
 import { setPrefectures } from './features/prefectures/prefecturesSlice';
